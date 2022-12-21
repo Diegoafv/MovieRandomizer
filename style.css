@@ -1,0 +1,142 @@
+:root {
+  --background: #100325;
+  --text-color: #fff;
+  --start: #000;
+  --middle: #100325;
+  --end: #3b1657;
+  --text-color-menu-mobile: #e1e1e6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto", sans-serif;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background: var(--background);
+  background: linear-gradient(
+    45deg,
+    var(--start) 0%,
+    var(--middle) 50%,
+    var(--end) 100%
+  );
+}
+
+header {
+  width: 50%;
+}
+
+main {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+footer {
+  width: 50%;
+}
+
+.header-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.header-logo img {
+  width: 100%;
+  height: 100%;
+}
+
+.header-title h1 {
+  font-size: 2rem;
+  color: var(--text-color);
+}
+
+.main-container {
+  width: min(100%, 620px);
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.movie-cover img {
+  width: 170px;
+  height: 240px;
+}
+
+.movie-info {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.movie-info h2 {
+  font-size: 1.5rem;
+  color: var(--text-color);
+}
+
+.movie-info p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
+
+.footer-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer-button button {
+  width: 180px;
+  height: 45px;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, var(--middle) 0%, var(--end) 100%);
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+.footer-button button img {
+  width: 30px;
+  height: 30px;
+}
+
+.footer-text {
+  width: 60%;
+  text-align: center;
+}
+
+.footer-text p {
+  font-size: 1rem;
+  color: var(--text-color);
+}
