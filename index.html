@@ -30,35 +30,45 @@
       </section>
     </header>
     <main>
-      <section class="main-container">
-        <div class="movie-cover">
-          <img src="/assets/cover-example.png" alt="movie cover" />
+      <section class="movie-section">
+        <div class="main-container">
+          <div class="movie-cover">
+            <img src="#" alt="movie cover" id="movie-poster" />
+          </div>
+          <div class="movie-info-container">
+            <div class="movie-info">
+              <h2 id="movie-name"></h2>
+              <p id="movie-description"></p>
+            </div>
+            <div class="see-trailer">
+              <button id="see-trailer-button">
+                <img
+                  src="assets/arrow-down.svg"
+                  id="see-trailer-img"
+                  alt="play"
+                />
+                <span id="see-trailer-text">See Trailer</span>
+              </button>
+            </div>
+          </div>
         </div>
-        <div class="movie-info">
-          <h2>Movie Title</h2>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur
-            mollis magna dui, varius finibus ex ullamcorper vitae. Nam viverra,
-            odio non pulvinar rhoncus, ante orci suscipit elit, eu efficitur
-            magna est sed mauris. Fusce sagittis tellus ac dui rutrum varius.
-            Curabitur odio odio, gravida id tortor in, imperdiet varius eros.
-            Integer dapibus gravida metus.
-          </p>
+        <div class="trailer-container">
+          <iframe id="video"></iframe>
         </div>
       </section>
     </main>
     <footer>
       <section class="footer-container">
         <div class="footer-button">
-          <button>
+          <button id="find-movie-button">
             <img src="/assets/logo.svg" alt="refresh" />
             <span>Find Movie</span>
           </button>
         </div>
         <div class="footer-text">
           <p>
-            Nam viverra, odio non pulvinar rhoncus, ante orci suscipit elit, eu
-            efficitur magna est sed mauris.
+            Click on "Find Movie" to get a random movie suggestion from the
+            database.
           </p>
         </div>
       </section>

@@ -15,13 +15,12 @@
 }
 
 body {
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  gap: 1.5rem;
+  gap: 1rem;
   background: var(--background);
   background: linear-gradient(
     45deg,
@@ -29,10 +28,15 @@ body {
     var(--middle) 50%,
     var(--end) 100%
   );
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
 }
 
 header {
   width: 50%;
+  padding-top: 2rem;
 }
 
 main {
@@ -66,18 +70,40 @@ footer {
   color: var(--text-color);
 }
 
-.main-container {
-  width: min(100%, 620px);
-  height: 100%;
-  display: flex;
+.movie-section {
+  width: min(100%, 580px);
+  display: none;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 3rem;
+  margin-bottom: 1rem;
+}
+
+.main-container {
+  width: 100%;
+  display: flex;
   justify-content: center;
   gap: 1.5rem;
 }
 
+.movie-cover {
+  display: flex;
+  align-items: center;
+}
+
 .movie-cover img {
-  width: 170px;
-  height: 240px;
+  width: 204px;
+  height: 288px;
+}
+
+.movie-info-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .movie-info {
@@ -89,14 +115,55 @@ footer {
   gap: 1rem;
 }
 
-.movie-info h2 {
+#movie-name {
   font-size: 1.5rem;
   color: var(--text-color);
 }
 
-.movie-info p {
+#movie-description {
   font-size: 1rem;
   color: var(--text-color);
+}
+
+.see-trailer {
+  width: 100%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: right;
+}
+
+#see-trailer-button {
+  width: 100%;
+  height: 70%;
+  border: none;
+  border-radius: 5px;
+  background: linear-gradient(45deg, var(--middle) 0%, var(--end) 100%);
+  cursor: pointer;
+  color: var(--text-color);
+  font-size: 0.9rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+}
+
+#see-trailer-button:hover {
+  background: linear-gradient(45deg, #21074a 0%, var(--end) 50%, #53117c 100%);
+}
+
+#see-trailer-button img {
+  width: 20px;
+  height: 30px;
+}
+
+.trailer-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+  align-items: center;
+  justify-content: center;
 }
 
 .footer-container {
@@ -132,7 +199,7 @@ footer {
 }
 
 .footer-text {
-  width: 60%;
+  width: 50%;
   text-align: center;
 }
 
