@@ -5,6 +5,8 @@
   --middle: #100325;
   --end: #3b1657;
   --text-color-menu-mobile: #e1e1e6;
+  --scrollbarBG: #100325;
+  --thumbBG: #3b1657;
 }
 
 * {
@@ -12,6 +14,26 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Roboto", sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+  overflow-y: overlay;
+  /* scrollbar-gutter: stable;*/
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+body::-webkit-scrollbar {
+  width: 11px;
+}
+body::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+body::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
 }
 
 body {
@@ -77,7 +99,7 @@ footer {
   align-items: center;
   justify-content: center;
   gap: 1rem;
-  margin-top: 3rem;
+  margin-top: 2rem;
   margin-bottom: 1rem;
 }
 
@@ -161,9 +183,17 @@ footer {
 .trailer-container {
   width: 100%;
   height: 100%;
-  display: none;
+  /*display: none;*/
   align-items: center;
   justify-content: center;
+  /*changes for animation*/
+  max-height: 0px;
+  transition: max-height 1s;
+  overflow: hidden;
+}
+
+#video {
+  border: 3px solid var(--end);
 }
 
 .footer-container {
@@ -191,6 +221,10 @@ footer {
   justify-content: center;
   gap: 0.5rem;
   padding: 0.5rem 1rem;
+}
+
+.footer-button button:hover {
+  background: linear-gradient(45deg, #21074a 0%, var(--end) 50%, #53117c 100%);
 }
 
 .footer-button button img {

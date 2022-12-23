@@ -63,14 +63,15 @@ seeTrailerButton.addEventListener("click", () => {
 
   if (trailerContainer.classList.contains("trailer-container-active")) {
     trailerContainer.classList.remove("trailer-container-active");
-    trailerContainer.style.display = "none";
+    //trailerContainer.style.display = "none";
+    trailerContainer.style.maxHeight = "0px";
     seeTrailerImg.src = "/assets/arrow-down.svg";
     seeTrailerText.innerHTML = "See trailer";
     return;
   }
-
   trailerContainer.classList.add("trailer-container-active");
-  trailerContainer.style.display = "flex";
+  //trailerContainer.style.display = "flex";
+  trailerContainer.style.maxHeight = "600px";
   seeTrailerImg.src = "/assets/arrow-up.svg";
   seeTrailerText.innerHTML = "Hide trailer";
 });
