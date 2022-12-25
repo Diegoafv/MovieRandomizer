@@ -12,6 +12,7 @@ const seeTrailerButton = document.querySelector("#see-trailer-button");
 
 findMovieButton.addEventListener("click", () => {
   const movieSection = document.querySelector(".movie-section");
+  const trailerContainer = document.querySelector(".trailer-container");
 
   const movieName = document.querySelector("#movie-name");
   const movieDescription = document.querySelector("#movie-description");
@@ -60,6 +61,12 @@ findMovieButton.addEventListener("click", () => {
           video.allow =
             "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture";
           video.allowfullscreen = "true";
+
+          //in case the trailer tab is open and user resized the screen,
+          // force the trailer container to resize proportionally to the screen size
+          if (trailerContainer.classList.contains("trailer-container-active")) {
+            trailerContainer.style.maxHeight = video.height + "px";
+          }
         })
         .then(() => {
           if (!document.querySelector("#video").src) {
@@ -74,6 +81,8 @@ findMovieButton.addEventListener("click", () => {
           trailerNotAvailable.style.height =
             trailerNotAvailable.style.width / 1.78 + "px";
           trailerNotAvailable.style.display = "flex";
+
+          video.height = trailerNotAvailable.height;
 
           //hide iframe
           video.style.display = "none";

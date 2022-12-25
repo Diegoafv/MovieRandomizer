@@ -93,6 +93,7 @@ footer {
 .header-title h1 {
   font-size: 2rem;
   color: var(--text-color);
+  text-align: center;
 }
 
 .movie-section {
@@ -197,6 +198,7 @@ footer {
 
 #video {
   border: 3px solid var(--end);
+  width: 100%;
 }
 
 #trailer-not-available {
@@ -389,4 +391,44 @@ a {
 
 .back-button-container {
   margin-top: 1em;
+}
+
+@media only screen and (max-width: 900px) {
+  .main-container {
+    flex-direction: column;
+    align-items: center;
+  }
+  .movie-info-container {
+    gap: 1rem;
+  }
+  .movie-section {
+    margin-top: 1rem;
+  }
+  .movie-info {
+    align-items: center;
+  }
+  #movie-name {
+    text-align: center;
+  }
+  #movie-description {
+    text-align: center;
+  }
+  .index-body {
+    margin-top: 1rem;
+  }
+  .now-playing-body {
+    margin-top: 1rem;
+  }
+  .now-playing {
+    justify-content: center;
+  }
+  .now-playing-movies {
+    flex-wrap: wrap;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+  }
+  .map {
+    display: none;
+  }
 }
