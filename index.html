@@ -18,7 +18,7 @@
     />
     <title>Movie Randomizer</title>
   </head>
-  <body>
+  <body class="index-body">
     <header>
       <section class="header-container">
         <div class="header-logo">
@@ -54,6 +54,11 @@
         </div>
         <div class="trailer-container">
           <iframe id="video"></iframe>
+          <img
+            src="assets/trailer-not-available.png"
+            alt="trailer not available"
+            id="trailer-not-available"
+          />
         </div>
       </section>
     </main>
@@ -70,6 +75,11 @@
             Click on "Find Movie" to get a random movie suggestion from the
             database.
           </p>
+        </div>
+        <div class="now-playing-button-container">
+          <a href="/now-playing.html">
+            <button class="nav-button">Now Playing</button>
+          </a>
         </div>
       </section>
     </footer>
